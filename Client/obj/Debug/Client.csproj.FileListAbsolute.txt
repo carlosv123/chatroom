@@ -10,3 +10,9 @@ C:\Users\vasqu\Desktop\ChatroomStarter\ChatroomStarter\ChatroomStarter\Client\bi
 C:\Users\vasqu\Desktop\ChatroomStarter\ChatroomStarter\ChatroomStarter\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\vasqu\Desktop\ChatroomStarter\ChatroomStarter\ChatroomStarter\Client\obj\Debug\Client.exe
 C:\Users\vasqu\Desktop\ChatroomStarter\ChatroomStarter\ChatroomStarter\Client\obj\Debug\Client.pdb
+C:\Users\vasqu\Desktop\Chat_ROOM\ChatroomStarter\ChatroomStarter\chatroom\Client\bin\Debug\Client.exe.config
+C:\Users\vasqu\Desktop\Chat_ROOM\ChatroomStarter\ChatroomStarter\chatroom\Client\bin\Debug\Client.exe
+C:\Users\vasqu\Desktop\Chat_ROOM\ChatroomStarter\ChatroomStarter\chatroom\Client\bin\Debug\Client.pdb
+C:\Users\vasqu\Desktop\Chat_ROOM\ChatroomStarter\ChatroomStarter\chatroom\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\vasqu\Desktop\Chat_ROOM\ChatroomStarter\ChatroomStarter\chatroom\Client\obj\Debug\Client.exe
+C:\Users\vasqu\Desktop\Chat_ROOM\ChatroomStarter\ChatroomStarter\chatroom\Client\obj\Debug\Client.pdb
