@@ -12,8 +12,12 @@ namespace Server
 {
     class Server
     {
+
+        Dictionary<string, Client> UserDictionary = new Dictionary<string, Client>();
+
         public static Client client;
         TcpListener server;
+
         public Server()
         {
             server = new TcpListener(IPAddress.Parse("192.168.0.122"), 9999);
@@ -32,6 +36,14 @@ namespace Server
             Console.WriteLine("Connected");
             NetworkStream stream = clientSocket.GetStream();
             client = new Client(stream, clientSocket);
+        }
+        private void CreateUser()
+        {
+            client.UserId = client.Recieve();
+            Console.WriteLine("user name" + client.UserId);
+            UserDictionary.Add(client.UserId, client);
+          
+
         }
         private void Respond(string body)
         {
