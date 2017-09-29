@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    class Client
+    class Client : Inotify
     {
         NetworkStream stream;
         TcpClient client;
@@ -32,5 +32,10 @@ namespace Server
             return recievedMessageString;
         }
 
+        public void notify()
+        {
+            Console.WriteLine("User has been notify");
+            
+        }
     }
 }

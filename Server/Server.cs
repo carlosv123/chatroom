@@ -10,10 +10,11 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    class Server
+     class Server 
     {
 
         Dictionary<string, Client> UserDictionary = new Dictionary<string, Client>();
+        IList<Inotify> users = new List<Inotify>();
 
         public static Client client;
         TcpListener server;
@@ -42,12 +43,27 @@ namespace Server
             client.UserId = client.Recieve();
             Console.WriteLine("user name" + client.UserId);
             UserDictionary.Add(client.UserId, client);
-          
-
+ 
         }
+
         private void Respond(string body)
         {
              client.Send(body);
+        }
+        public void Join(Inotify u)
+        {
+            users.Add(u);
+        }
+        public void unjoin(Inotify u)
+        {
+            users.Remove(u);
+        }
+        public void Notifyusers()
+        {
+            foreach(Inotify u in users)
+            {
+                u.notify();
+            }
         }
     }
 }

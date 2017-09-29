@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Client
 {
-    class Client
+    class Client 
     {
         TcpClient clientSocket;
         NetworkStream stream;
@@ -18,6 +18,7 @@ namespace Client
             clientSocket.Connect(IPAddress.Parse(IP), port);
             stream = clientSocket.GetStream();
         }
+
         public void Send()
         {
             string messageString = UI.GetInput();
@@ -31,6 +32,6 @@ namespace Client
             UI.DisplayMessage(Encoding.ASCII.GetString(recievedMessage));
         }
        
-        
+       
     }
 }
