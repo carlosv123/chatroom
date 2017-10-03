@@ -31,7 +31,16 @@ namespace Server
             Console.WriteLine(recievedMessageString);
             return recievedMessageString;
         }
+        public string Send()
+        {
+            byte[] sendmessage = new byte[256];
+            stream.Read(sendmessage, 0, sendmessage.Length);
+            string sendmessagestring = Encoding.ASCII.GetString(sendmessage);
+            Console.WriteLine(sendmessagestring).Add();
+            return sendmessagestring;
 
+            
+        }
         public void notify()
         {
             Console.WriteLine("User has been notify");
