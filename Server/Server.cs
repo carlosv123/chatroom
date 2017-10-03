@@ -15,9 +15,9 @@ namespace Server
 
         Dictionary<string, Client> UserDictionary = new Dictionary<string, Client>();
 
-        Queue<Message> messages = new Queue<Message>();
+        public Queue<Message> messages = new Queue<Message>();
 
-        IList<Inotify> users = new List<Inotify>();
+        List<Inotify> users = new List<Inotify>();
 
         public static Client client;
         TcpListener server;
@@ -49,11 +49,15 @@ namespace Server
             UserDictionary.Add(client.UserId, client);
  
         }  
-        public void sendmessage()
-        {   //have a loop send messages to all people in the chatroom. //start with enqueue to accept messages, end with dequue to send messages out, and at the end, end it with count, to check if there any messages inside the queue.
-            client.Recieve();
-
-        }
+        //public void sendmessage()
+        //{ 
+        //   for(int i = 0; i < Client; i++)
+        //    {
+        //        Message messages = client.Recieve();
+        //        queue.Enqueue(messages);
+        //        dequeue; 
+        //    }
+        //}
        
 
         private void Respond(string body)

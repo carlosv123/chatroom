@@ -36,7 +36,7 @@ namespace Server
             byte[] sendmessage = new byte[256];
             stream.Read(sendmessage, 0, sendmessage.Length);
             string sendmessagestring = Encoding.ASCII.GetString(sendmessage);
-            Console.WriteLine(sendmessagestring).Add();
+            Console.WriteLine(sendmessagestring);
             return sendmessagestring;
 
             

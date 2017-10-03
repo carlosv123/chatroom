@@ -8,5 +8,6 @@ namespace Server
 {
     interface ILogger
     {
+
     }
 }
