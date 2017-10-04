@@ -10,15 +10,13 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-     class Server 
+     class Server : ILog
     {
 
         Dictionary<string, Client> UserDictionary = new Dictionary<string, Client>();
-
-        public Queue<Message> messages = new Queue<Message>();
-
+        Queue<Message> messages = new Queue<Message>();
         List<Inotify> users = new List<Inotify>();
-
+     
         public static Client client;
         TcpListener server;
 
@@ -64,20 +62,12 @@ namespace Server
         {
              client.Send(body);
         }
-        public void Join(Inotify u)
+        public void logger(string messages)
         {
-            users.Add(u);
+            System.IO.StreamWriter file = new System.IO.StreamWriter("",true);
+            file.WriteLine(messages);
+            file.Close();
         }
-        public void unjoin(Inotify u)
-        {
-            users.Remove(u);
-        }
-        public void Notifyusers()
-        {
-            foreach(Inotify u in users)
-            {
-                u.notify();
-            }
-        }
+      
     }
 }

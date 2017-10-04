@@ -8,6 +8,6 @@ namespace Server
 {
     interface Inotify
     {
-        void notify();
+        void notify(string message);
     }
 }
